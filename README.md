@@ -2,9 +2,9 @@
 
 > An AI-powered manifestation coaching experience for Whop communities. Text-first MVP with an ancient monastery aesthetic and calm, wise guidance.
 
-<!-- Hero Image: place your image at docs/hero-monk.jpg (or update the path below) -->
+<!-- Hero Image: served from public/ for Next.js static hosting -->
 <p align="center">
-  <img src="docs/hero-monk.jpg" alt="AI Monk Mentor" width="720" />
+  <img src="/images/Tibetan-monk.png" alt="AI Monk Mentor" width="720" />
 </p>
 
 ## Repository
@@ -118,7 +118,7 @@ manifest_the_unseen/
 
 ## Image Guidance
 
-- The README references `docs/hero-monk.jpg`. Drop your chosen image there (or update the path). If you’d like, I can save the image you shared as `docs/hero-monk.jpg` and commit it.
+- The README references `/images/Tibetan-monk.png` which should live at `public/images/Tibetan-monk.png`.
 
 ## References
 
