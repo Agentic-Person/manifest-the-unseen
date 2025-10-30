@@ -20,6 +20,9 @@
 .DS_Store
 *.pem
 
+# local image snippets (not tracked)
+/snips/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

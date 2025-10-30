@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a new capability or improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / opportunity
+      description: What user problem are we solving? Why is this valuable?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the feature, user story, or UX change.
+      placeholder: As a [role], I want [capability] so that [benefit].
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope & acceptance criteria
+      description: Define what is in/out of scope and acceptance criteria.
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / tradeoffs
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This aligns with the Four Pillars and MVP goals
+          required: true
+        - label: I added any relevant designs or screenshots
+          required: false
