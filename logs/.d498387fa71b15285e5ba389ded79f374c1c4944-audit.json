@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "c:\\projects\\manifest_the_unseen\\logs\\.d498387fa71b15285e5ba389ded79f374c1c4944-audit.json",
+    "files": [
+        {
+            "date": 1761845603598,
+            "name": "c:\\projects\\manifest_the_unseen\\logs\\mcp-puppeteer-2025-10-30.log",
+            "hash": "d9d22d0658366ff7f28a84c2585830d49632bd9943900965f7069406e5e00e2e"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,263 @@
+{
+  "meditation_library": {
+    "total_count": 5,
+    "total_duration_minutes": 49,
+    "last_updated": "2025-10-29",
+    "status": "MVP - 5 of 7-10 target meditations complete"
+  },
+  "meditations": [
+    {
+      "id": "foundation-01",
+      "title": "Finding Your Signal",
+      "description": "Discover the true signal beneath your desires and learn to differentiate the quiet wisdom of your inner knowing from the noise of fear and wanting.",
+      "duration_seconds": 720,
+      "duration_display": "12 min",
+      "category": "foundation",
+      "series": "Foundation Series",
+      "audio_url": null,
+      "transcript_path": "content/meditations/scripts/foundation/01-finding-your-signal.md",
+      "tags": [
+        "signal",
+        "desire",
+        "body-scan",
+        "fear-vs-faith",
+        "chapter-1",
+        "inner-knowing"
+      ],
+      "related_phase": 1,
+      "related_chapter": "Chapter 1 - The Signal Beneath Desire",
+      "healing_frequencies": ["432Hz"],
+      "soundscape_elements": [
+        "Tibetan singing bowls (432Hz)",
+        "Gentle mountain wind"
+      ],
+      "best_for": [
+        "Clarity on true desires",
+        "Differentiating fear from faith",
+        "Connecting to inner guidance"
+      ],
+      "difficulty": "beginner",
+      "created_at": "2025-10-29",
+      "status": "script_complete",
+      "production_status": "awaiting_voice_production"
+    },
+    {
+      "id": "foundation-02",
+      "title": "Frequency Over Force",
+      "description": "Release the need to push, strain, and control. Learn to align with the natural frequency of your desires and flow like water toward your manifestations.",
+      "duration_seconds": 600,
+      "duration_display": "10 min",
+      "category": "foundation",
+      "series": "Foundation Series",
+      "audio_url": null,
+      "transcript_path": "content/meditations/scripts/foundation/02-frequency-over-force.md",
+      "tags": [
+        "frequency",
+        "effortless",
+        "alignment",
+        "river-metaphor",
+        "chapter-3",
+        "letting-go",
+        "surrender"
+      ],
+      "related_phase": 3,
+      "related_chapter": "Chapter 3 - Frequency Over Force",
+      "healing_frequencies": ["528Hz"],
+      "soundscape_elements": [
+        "Flowing river",
+        "528Hz undertone",
+        "Tibetan throat singing"
+      ],
+      "best_for": [
+        "Releasing control and striving",
+        "Learning to flow vs. force",
+        "Aligning with natural ease"
+      ],
+      "difficulty": "beginner",
+      "created_at": "2025-10-29",
+      "status": "script_complete",
+      "production_status": "awaiting_voice_production"
+    },
+    {
+      "id": "foundation-03",
+      "title": "Embodiment Practice",
+      "description": "A powerful 15-minute practice to embody your desired reality at the cellular level. Stop waiting to become and recognize you already are. Reality bends to those who embody their truth.",
+      "duration_seconds": 900,
+      "duration_display": "15 min",
+      "category": "foundation",
+      "series": "Foundation Series",
+      "audio_url": null,
+      "transcript_path": "content/meditations/scripts/foundation/03-embodiment-practice.md",
+      "tags": [
+        "embodiment",
+        "cellular",
+        "identity",
+        "being",
+        "chapter-4",
+        "manifestation",
+        "quantum",
+        "transformation"
+      ],
+      "related_phase": 4,
+      "related_chapter": "Chapter 4 - The Power of Embodiment",
+      "healing_frequencies": ["528Hz"],
+      "soundscape_elements": [
+        "Deep Tibetan throat singing",
+        "528Hz undertone",
+        "Heartbeat pulse rhythm",
+        "Singing bowls"
+      ],
+      "best_for": [
+        "Living as desired reality NOW",
+        "Cellular-level transformation",
+        "Advanced manifestation practice"
+      ],
+      "difficulty": "intermediate",
+      "created_at": "2025-10-29",
+      "status": "script_complete",
+      "production_status": "awaiting_voice_production"
+    },
+    {
+      "id": "daily-01",
+      "title": "Morning Frequency Alignment",
+      "description": "A quick 5-minute practice to set your energetic frequency for the day. Choose how you wish to feel and tune your entire being to that vibration.",
+      "duration_seconds": 300,
+      "duration_display": "5 min",
+      "category": "daily",
+      "series": "Daily Practice Series",
+      "audio_url": null,
+      "transcript_path": "content/meditations/scripts/daily-practice/01-morning-frequency-alignment.md",
+      "tags": [
+        "morning",
+        "intention",
+        "frequency",
+        "activation",
+        "daily-practice",
+        "quick"
+      ],
+      "related_phase": null,
+      "related_chapter": null,
+      "healing_frequencies": ["432Hz", "528Hz"],
+      "soundscape_elements": [
+        "Sunrise chimes",
+        "Tingsha cymbals",
+        "432Hz & 528Hz singing bowls",
+        "Uplifting ambient tones"
+      ],
+      "best_for": [
+        "Morning routine",
+        "Setting daily intention",
+        "Quick energy activation"
+      ],
+      "difficulty": "beginner",
+      "created_at": "2025-10-29",
+      "status": "script_complete",
+      "production_status": "awaiting_voice_production"
+    },
+    {
+      "id": "daily-02",
+      "title": "Evening Gratitude Practice",
+      "description": "A gentle 7-minute practice to close your day with gratitude, release what no longer serves, and prepare for restful sleep. Cultivate appreciation and let go with ease.",
+      "duration_seconds": 420,
+      "duration_display": "7 min",
+      "category": "daily",
+      "series": "Daily Practice Series",
+      "audio_url": null,
+      "transcript_path": "content/meditations/scripts/daily-practice/02-evening-gratitude-practice.md",
+      "tags": [
+        "evening",
+        "gratitude",
+        "release",
+        "sleep-preparation",
+        "daily-practice",
+        "bedtime",
+        "reflection"
+      ],
+      "related_phase": 7,
+      "related_chapter": "Chapter 7 - Practicing Gratitude",
+      "healing_frequencies": ["432Hz"],
+      "soundscape_elements": [
+        "Gentle water (stream/rain)",
+        "432Hz singing bowls",
+        "Soft cricket sounds (optional)"
+      ],
+      "best_for": [
+        "Evening wind-down",
+        "Gratitude cultivation",
+        "Sleep preparation"
+      ],
+      "difficulty": "beginner",
+      "created_at": "2025-10-29",
+      "status": "script_complete",
+      "production_status": "awaiting_voice_production"
+    }
+  ],
+  "series_breakdown": {
+    "foundation": {
+      "count": 3,
+      "total_minutes": 37,
+      "target": "5-10 meditations",
+      "status": "60% complete for MVP"
+    },
+    "daily": {
+      "count": 2,
+      "total_minutes": 12,
+      "target": "2-4 meditations",
+      "status": "100% complete for MVP"
+    },
+    "specialized": {
+      "count": 0,
+      "total_minutes": 0,
+      "target": "2-3 meditations",
+      "status": "Optional for MVP"
+    }
+  },
+  "next_scripts_to_create": [
+    {
+      "title": "Quantum Field Activation",
+      "duration": "15 min",
+      "category": "foundation",
+      "related_chapter": "Chapter 7",
+      "priority": "high"
+    },
+    {
+      "title": "Trust & Surrender",
+      "duration": "12 min",
+      "category": "foundation",
+      "related_chapter": "Chapter 9",
+      "priority": "high"
+    },
+    {
+      "title": "Abundance Frequency Activation",
+      "duration": "10 min",
+      "category": "specialized",
+      "priority": "medium"
+    },
+    {
+      "title": "Limiting Belief Release",
+      "duration": "12 min",
+      "category": "specialized",
+      "priority": "medium"
+    }
+  ],
+  "production_pipeline": {
+    "next_steps": [
+      "Generate voice narration via ElevenLabs or record manually",
+      "Source ambient soundscapes (Freesound.org, Suno.ai)",
+      "Mix audio in Audacity (voice + ambient + frequencies)",
+      "Export as MP3 (256kbps VBR) with metadata",
+      "Upload to CDN (Cloudflare R2 or AWS S3)",
+      "Update audio_url fields in this metadata file",
+      "Bulk import to Supabase meditations table"
+    ],
+    "estimated_time_remaining": "15-20 hours for next 2 meditations + audio production for all 7"
+  },
+  "technical_notes": {
+    "format": "MP3",
+    "bitrate": "256kbps VBR",
+    "sample_rate": "44.1kHz",
+    "channels": "Stereo",
+    "file_naming": "[category]-[number]-[name]-[duration].mp3",
+    "cdn_folder_structure": "meditations/[category]/[filename].mp3"
+  }
+}

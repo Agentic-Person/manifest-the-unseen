@@ -1,3 +1,4 @@
+
 # MCP Server Setup Guide
 
 This guide explains how to configure the Model Context Protocol (MCP) servers for the Manifest the Unseen project.
@@ -5,32 +6,25 @@ This guide explains how to configure the Model Context Protocol (MCP) servers fo
 ## Prerequisites
 
 You need API keys for the following services:
-- Supabase (✅ already configured in `.env.local`)
+- Supabase (project already created)
 - Pipedream (optional, for workflow automation)
 - Whop (for platform integration)
 
-## Security Approach
-
-**All API keys are stored in `.env.local`** and referenced by `mcp.json` using environment variables. This keeps sensitive credentials out of configuration files and follows security best practices.
-
 ## Configuration Steps
 
-### 1. Verify Supabase API Key
+### 1. Get Your Supabase API Key
 
-Your Supabase anon key is already configured in `.env.local` as `SUPABASE_ANON_KEY`. The `mcp.json` file references it using `${SUPABASE_ANON_KEY}`.
-
-If you need to update it:
 1. Go to your Supabase project dashboard: https://supabase.com/dashboard/project/zbyszxtwzoylyygtexdr
 2. Navigate to **Settings** → **API**
 3. Copy your **anon/public** key
-4. Update the `SUPABASE_ANON_KEY` value in `.env.local` (line 2)
+4. Update `mcp.json` line 16, replace `YOUR_SUPABASE_ANON_KEY_HERE` with your actual key
 
 ### 2. Get Your Pipedream API Key (Optional)
 
 1. Sign up at https://pipedream.com
 2. Go to **Settings** → **API Keys**
 3. Create a new API key
-4. Update the `PIPEDREAM_API_KEY` value in `.env.local` (line 3)
+4. Update `mcp.json` line 11, replace `YOUR_PIPEDREAM_API_KEY_HERE` with your actual key
 
 **Note**: Pipedream MCP can work without an API key for basic operations, but will have rate limits.
 
@@ -46,8 +40,6 @@ To get Whop credentials:
 
 ## Updated mcp.json Structure
 
-The `mcp.json` file now uses environment variable references instead of hardcoded API keys:
-
 ```json
 {
   "mcpServers": {
@@ -59,12 +51,12 @@ The `mcp.json` file now uses environment variable references instead of hardcode
       "command": "npx",
       "args": ["@pipedream/mcp"],
       "env": {
-        "PIPEDREAM_API_KEY": "${PIPEDREAM_API_KEY}"
+        "PIPEDREAM_API_KEY": "YOUR_API_KEY"
       }
     },
     "supabase": {
       "type": "sse",
-      "url": "https://mcp.supabase.com/mcp?project_ref=zbyszxtwzoylyygtexdr&api_key=${SUPABASE_ANON_KEY}"
+      "url": "https://mcp.supabase.com/mcp?project_ref=zbyszxtwzoylyygtexdr&api_key=YOUR_API_KEY"
     }
   }
 }
@@ -75,29 +67,16 @@ The `mcp.json` file now uses environment variable references instead of hardcode
 ### ✅ Fixed Issues:
 
 1. **Whop Server**: Changed from `whop-mcp-server-claude` (WHOOP fitness tracker) to `mint-mcp run whop` (Whop commerce platform)
-2. **Supabase Server**: Now references `${SUPABASE_ANON_KEY}` from `.env.local` (already configured ✅)
-3. **Pipedream Server**: Now references `${PIPEDREAM_API_KEY}` from `.env.local` (already configured ✅)
-4. **Puppeteer Server**: Updated to use actively maintained `puppeteer-mcp-server` (v0.7.2) ✅
-5. **Security**: API keys are now stored in `.env.local` instead of `mcp.json`
+2. **Supabase Server**: Added `api_key` parameter to the URL (needs your actual key)
+3. **Pipedream Server**: Added `env` section for API key configuration
+4. **Puppeteer Server**: Removed (package deprecated and no longer supported)
 
 ### 🔄 Next Steps:
 
-1. ✅ All API keys configured in `.env.local`
-2. ✅ `.env.local` is in `.gitignore` (prevents committing secrets)
-3. **Restart Claude Code** to load the updated MCP configuration
+1. Replace placeholder API keys in `mcp.json` with your actual keys
+2. Copy `.env.example` to `.env` and fill in all credentials
+3. Restart Claude Code to load the updated MCP configuration
 4. Test each MCP server connection
-
-### 🎭 Puppeteer Capabilities
-
-The Puppeteer MCP server provides browser automation tools including:
-- Navigate to URLs and take screenshots
-- Fill forms and click elements
-- Execute JavaScript in browser context
-- Test web interfaces automatically
-- Scrape dynamic content
-- Generate PDFs of web pages
-
-**Note**: Puppeteer downloads Chromium on first use (~170MB). This is normal and only happens once.
 
 ## Testing MCP Servers
 
