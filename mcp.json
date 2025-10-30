@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "whop": {
+      "command": "npx",
+      "args": ["-y", "mint-mcp", "run", "whop"]
+    },
+    "pipedream": {
+      "command": "npx",
+      "args": ["@pipedream/mcp"],
+      "env": {
+        "PIPEDREAM_API_KEY": "${PIPEDREAM_API_KEY}"
+      }
+    },
+    "supabase": {
+      "type": "sse",
+      "url": "https://mcp.supabase.com/mcp?project_ref=zbyszxtwzoylyygtexdr&api_key=${SUPABASE_ANON_KEY}"
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "puppeteer-mcp-server"]
+    }
+  }
+}
