@@ -2,15 +2,14 @@
 
 > An AI-powered manifestation coaching experience for Whop communities. Text-first MVP with an ancient monastery aesthetic and calm, wise guidance.
 
-<!-- Hero Image: WebP-first with PNG fallback; served from public/ for Next.js -->
+<!-- Hero Image: use repo-relative path so it renders on GitHub; works in Next.js too -->
 <p align="center">
   <picture>
-    <source srcset="/images/Tibetan-monk.webp" type="image/webp" />
-    <img src="/images/Tibetan-monk.png" alt="AI Monk Mentor" width="720" />
+    <source srcset="public/images/Tibetan-monk.webp" type="image/webp" />
+    <img src="public/images/Tibetan-monk.png" alt="AI Monk Mentor" width="720" />
   </picture>
   <br />
   <em>Manifest the Unseen</em>
-  
 </p>
 
 ## Repository
