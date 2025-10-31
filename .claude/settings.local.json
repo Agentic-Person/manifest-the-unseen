@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(node -e:*)",
-      "Bash(npx:*)"
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(tsx:*)",
+      "MCP:*"
     ],
     "deny": [],
     "ask": []

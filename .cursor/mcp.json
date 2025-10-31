@@ -2,22 +2,37 @@
   "mcpServers": {
     "whop": {
       "command": "npx",
-      "args": ["-y", "mint-mcp", "run", "whop"]
+      "args": ["-y", "mint-mcp", "run", "whop"],
+      "env": {
+        "WHOP_API_KEY": "0u_46cKC_VSlKurR5yvKTiPBY_vfEkmmxKpS5-ztfkQ"
+      }
     },
     "pipedream": {
       "command": "npx",
-      "args": ["@pipedream/mcp"],
+      "args": ["-y", "@pipedream/mcp"],
       "env": {
-        "PIPEDREAM_API_KEY": "${PIPEDREAM_API_KEY}"
+        "PIPEDREAM_API_KEY": "30df00fb2838698e158e4c8dc81a4298"
       }
     },
     "supabase": {
       "type": "sse",
-      "url": "https://mcp.supabase.com/mcp?project_ref=zbyszxtwzoylyygtexdr&api_key=${SUPABASE_ANON_KEY}"
+      "url": "https://mcp.supabase.com/mcp?project_ref=Yzbyszxtwzoylyygtexdr"
     },
     "puppeteer": {
       "command": "npx",
-      "args": ["-y", "puppeteer-mcp-server"]
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "n8n-mcp": {
+      "args": [
+        "C:\\Users\\jimmy\\n8n-mcp\\dist\\mcp\\index.js"
+      ],
+      "command": "node",
+      "env": {
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "LOG_LEVEL": "error",
+        "MCP_MODE": "stdio",
+        "NODE_ENV": "production"
+      }
     }
   }
 }
