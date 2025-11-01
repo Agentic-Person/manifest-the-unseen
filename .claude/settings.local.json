@@ -5,7 +5,16 @@
       "Bash(npx:*)",
       "Bash(node:*)",
       "Bash(tsx:*)",
-      "MCP:*"
+      "MCP:*",
+      "Bash(curl:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm test:*)",
+      "Bash(pnpm test:e2e:*)",
+      "Bash(pnpm list:*)",
+      "Bash(supabase --version:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nchore: configure development tools and MCP servers\n\n- Update Claude Code settings with project preferences\n- Configure 5 MCP servers in Cursor (Whop, Pipedream, Supabase, Puppeteer, Filesystem)\n- Add Claude Desktop MCP server configuration\n- Include development plans for tracking\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []

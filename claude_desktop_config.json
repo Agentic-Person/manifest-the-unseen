@@ -33,14 +33,6 @@
         "MCP_MODE": "stdio",
         "NODE_ENV": "production"
       }
-    },
-    "canva": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@canva/cli@latest",
-        "mcp"
-      ]
     }
   }
 }
