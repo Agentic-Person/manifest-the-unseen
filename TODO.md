@@ -31,10 +31,13 @@ This project REQUIRES the following MCP servers to be running:
    - `docs/development-execution-plan.md` - Concise 6-week plan
 
 2. **Created Task Management System:**
-   - `tasks/` directory structure
-   - `tasks/TASK-TEMPLATE.md` - Template for new tasks
-   - `tasks/README.md` - Task system documentation
-   - 4 agent subdirectories created
+   - `tasks/` directory structure (Claude Code agents - Foundation layer)
+   - `cursor_tasks/` directory structure (Cursor agents - Feature layer)
+   - `tasks/TASK-TEMPLATE.md` - Template for Claude Code tasks
+   - `cursor_tasks/CURSOR-TASK-TEMPLATE.md` - Template for Cursor tasks
+   - `tasks/README.md` - Foundation task system documentation
+   - `cursor_tasks/README.md` - Feature task system documentation
+   - Agent subdirectories created for both systems
 
 3. **Created Initial Tasks:**
    - **Agent 2 (Backend Lead):**
@@ -58,9 +61,22 @@ This project REQUIRES the following MCP servers to be running:
    - Typography and spacing guidelines established
    - Audio design principles (432Hz, 528Hz, singing bowls, throat singing)
 
----
+## 🎯 Cursor Tasks System (Feature Layer)
 
-## 🚀 Next Steps (When MCP Servers Are Connected)
+**NEW**: Parallel task system for Cursor agents building features on top of Claude Code's foundation.
+
+**Cursor Agent Responsibilities:**
+- **Cursor Agent 1**: Workbook UI (30 exercises across 10 phases) - **MUST USE Canva MCP**
+- **Cursor Agent 2**: Journaling UI (3 types) - **MUST USE Supabase MCP**
+- **Cursor Agent 3**: AI Mentor chat UI - **MUST USE Supabase MCP**
+- **Cursor Agent 4**: Canva design workflow - **MUST USE Canva MCP exclusively**
+
+**Status Tracking:**
+Each Cursor task tracks: Not Started → In Progress → Finished → Integrated → Tested
+
+**See:** `cursor_tasks/README.md` for complete documentation
+
+---
 
 ### Week 1 - Foundation (Critical Path)
 
@@ -257,12 +273,22 @@ When completing tasks:
 - Execution Plan: `docs/development-execution-plan.md`
 
 ### Task Files
+
+**Foundation Tasks (Claude Code):**
 - Task Template: `tasks/TASK-TEMPLATE.md`
 - Task System Guide: `tasks/README.md`
 - Agent 1 Tasks: `tasks/agent-1-frontend-lead/`
 - Agent 2 Tasks: `tasks/agent-2-backend-lead/`
-- Agent 3 Tasks: `tasks/agent-3-journal-meditation-specialist/`
+- Agent 3 Tasks: `tasks/agent-3-journal-meditation-specialist/` (removed from MVP)
 - Agent 4 Tasks: `tasks/agent-4-integration-lead/`
+
+**Feature Tasks (Cursor):**
+- Task Template: `cursor_tasks/CURSOR-TASK-TEMPLATE.md`
+- Task System Guide: `cursor_tasks/README.md`
+- Cursor Agent 1: `cursor_tasks/cursor-agent-1-workbook-ui/` (10 phase exercises)
+- Cursor Agent 2: `cursor_tasks/cursor-agent-2-journaling-ui/` (3 journal types)
+- Cursor Agent 3: `cursor_tasks/cursor-agent-3-ai-mentor-ui/` (chat interface)
+- Cursor Agent 4: `cursor_tasks/cursor-agent-4-canva-designs/` (design system + 10 phases)
 
 ### External Resources
 - [Whop Developer Docs](https://dev.whop.com)

@@ -4,12 +4,13 @@ This guide explains how to configure the Model Context Protocol (MCP) servers fo
 
 ## Overview
 
-This project uses **5 MCP servers** configured across multiple applications:
+This project uses **6 MCP servers** configured across multiple applications:
 - **Whop** - Whop commerce platform API documentation and integration
 - **Pipedream** - Workflow automation and API orchestration
 - **Supabase** - Direct database operations and queries
 - **Puppeteer** - Browser automation and web testing
 - **n8n-mcp** - n8n workflow automation server
+- **Canva** - Canva design creation and management
 
 ## Configuration Files
 
@@ -30,6 +31,7 @@ You need API keys for the following services:
 - **Whop** (required, for platform integration)
 - **n8n-mcp** (optional, requires local n8n installation)
 - **Puppeteer** (no API key needed, uses npx)
+- **Canva** (no API key needed for basic usage, uses npx)
 
 **System Requirements:**
 - Node.js 18+ installed (for npx commands)
@@ -77,9 +79,13 @@ If you want to use the n8n-mcp server:
 
 No additional setup needed! Puppeteer will automatically download Chromium on first use (~170MB).
 
+### 6. Canva Setup
+
+No additional setup needed! Canva MCP uses the Canva CLI package which will be downloaded automatically via npx.
+
 ## Complete MCP Configuration
 
-Here's the complete `mcp.json` structure with all 5 servers configured:
+Here's the complete `mcp.json` structure with all 6 servers configured:
 
 ```json
 {
@@ -117,6 +123,14 @@ Here's the complete `mcp.json` structure with all 5 servers configured:
         "MCP_MODE": "stdio",
         "NODE_ENV": "production"
       }
+    },
+    "canva": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@canva/cli@latest",
+        "mcp"
+      ]
     }
   }
 }
@@ -126,6 +140,7 @@ Here's the complete `mcp.json` structure with all 5 servers configured:
 - Replace `YOUR_WHOP_API_KEY_HERE` and `YOUR_PIPEDREAM_API_KEY_HERE` with your actual keys
 - Supabase uses OAuth - no API key needed in the URL (will prompt on first use)
 - Update the n8n-mcp path if your installation is in a different location
+- Canva MCP requires no API key for basic usage (uses npx to download CLI automatically)
 - All config files should use the same structure
 
 ## Configuration Details
@@ -160,6 +175,12 @@ Here's the complete `mcp.json` structure with all 5 servers configured:
    - Requires path to built `index.js` file
    - Configured with production environment variables
    - Optional - only needed if using n8n workflows
+
+6. **Canva Server**: 
+   - Uses `@canva/cli` package via npx
+   - No API key required for basic usage
+   - Allows AI-powered design creation and management
+   - Automatically downloads CLI on first use
 
 ## Setup Checklist
 
@@ -196,6 +217,7 @@ After configuration, you can verify the servers are working by asking Claude to:
 - **Supabase**: "List Supabase tables" or "Query the user_profiles table"
 - **Puppeteer**: "Take a screenshot of google.com" or "Navigate to example.com"
 - **n8n-mcp**: "List n8n workflows" or "Check n8n server status"
+- **Canva**: "Create a new Canva design" or "How many components are in the App UI Kit?"
 
 You can also check MCP server status:
 - **Cursor**: Settings → MCP or check Output panel
@@ -239,9 +261,15 @@ You can also check MCP server status:
 - **Solution**: Verify npm is in your PATH: `npm --version`
 
 **Issue**: Config files out of sync
-- **Solution**: Ensure all 5 config files are updated (see Configuration Files section)
+- **Solution**: Ensure all config files are updated (see Configuration Files section)
 - **Solution**: Copy configuration from `.mcp.json` to other locations
 - **Solution**: Restart each application after updating configs
+
+**Issue**: Canva MCP not working
+- **Solution**: Ensure Node.js v20 or later is installed: `node --version`
+- **Solution**: Verify npx is accessible: `npx --version`
+- **Solution**: Canva CLI will download automatically on first use - allow time for download
+- **Solution**: Check internet connection for npx package download
 
 ## Reference Links
 
@@ -250,6 +278,7 @@ You can also check MCP server status:
 - [Pipedream MCP](https://mcp.pipedream.com)
 - [Mint MCP](https://www.npmjs.com/package/mint-mcp)
 - [Puppeteer MCP Server](https://www.npmjs.com/package/@modelcontextprotocol/server-puppeteer)
+- [Canva MCP Server](https://www.canva.dev/docs/connect/mcp-server/)
 - [Model Context Protocol Docs](https://modelcontextprotocol.io)
 - [n8n Documentation](https://docs.n8n.io)
 
@@ -262,6 +291,6 @@ You can also check MCP server status:
 - **Tech Stack**: Next.js, Supabase, Claude Haiku 4.5
 
 **Current Status:**
-- ✅ All 5 MCP servers configured
+- ✅ All 6 MCP servers configured
 - ✅ Config files synchronized across applications
 - ✅ Ready for testing after application restarts

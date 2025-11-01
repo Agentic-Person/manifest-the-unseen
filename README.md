@@ -78,10 +78,11 @@ CLOUDFLARE_R2_BUCKET=
 
 This project is configured to use multiple MCP servers for dev ergonomics and automation. See `MCP_SETUP_GUIDE.md` and `.cursor/mcp-readme.md`.
 
-- Whop MCP — product/membership management and webhooks
-- Pipedream MCP — workflow automation across services
-- Supabase MCP — DB schema/queries, logs, advisors
-- Puppeteer MCP — UI testing, screenshots, PDF generation
+- **Whop MCP** — product/membership management and webhooks (MANDATORY for backend)
+- **Pipedream MCP** — workflow automation across services
+- **Supabase MCP** — DB schema/queries, logs, advisors (MANDATORY for backend)
+- **Puppeteer MCP** — UI testing, screenshots, PDF generation (MANDATORY for testing)
+- **Canva MCP** — design creation and graphics (MANDATORY for frontend/workbook designs)
 
 ## Project Structure (planned)
 
@@ -96,8 +97,14 @@ manifest_the_unseen/
 ├─ public/
 │  └─ audio/
 ├─ docs/
-└─ tasks/
+├─ tasks/              # Claude Code agents (Foundation layer)
+└─ cursor_tasks/       # Cursor agents (Feature layer)
 ```
+
+**Task Management:**
+- `tasks/` - Claude Code agents build foundation (APIs, database, auth)
+- `cursor_tasks/` - Cursor agents build features (UI components, workbook exercises, journaling)
+- See `tasks/README.md` and `cursor_tasks/README.md` for details
 
 ## Design & Aesthetic
 
@@ -128,6 +135,7 @@ manifest_the_unseen/
 - Planning & Product: `docs/manifest_the_unseen_PP.md`
 - Methodology: `docs/manifest_the_unseen_cn.md`
 - Claude Code guidance: `CLAUDE.md`
+- Task Systems: `tasks/README.md` (Foundation) | `cursor_tasks/README.md` (Features)
 
 ---
 
